@@ -40,7 +40,7 @@ class ExpoPushNotifications
             'Content-Type' => 'application/json'
         ])->post("{$this->baseUrl}/send", (array)$pushNotification);
 
-        return $response->json()['data'];
+        return $response->json()['data'] ?? [];
     }
 
     /**
